@@ -8,9 +8,6 @@ RUN apt-get update && apt-get install -y \
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Install additional PHP libraries
-RUN docker-php-ext-install bcmath pdo_mysql
  
 # Install xdebug
 RUN pecl install xdebug \
